@@ -500,5 +500,13 @@
     "product_name": "Ham - Smoked, Bone - In",
     "price": "$4729.49",
     "image": "http://dummyimage.com/181x180.png/ff4444/ffffff"
-  }]
+  }],
+  "users":[
+    {
+      "username":"parag",
+      "password":"123456",
+      "token":"123456"
+    }
+
+  ]
 }
