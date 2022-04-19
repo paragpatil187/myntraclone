@@ -7,7 +7,8 @@ const reducer=(state=initState,action)=>{
     switch(action.type){
         case STORE_DATA:
             return{...state,data:action.payload}
-            default:return state;
+            default:
+                return state;
     }
 }
 export {reducer}
