@@ -4,7 +4,8 @@ import { useDispatch, useSelector } from 'react-redux'
 import storeData from '../redux/Data/action'
 
 
-const Product = () => {
+const Product = ({form}) => {
+  console.log(form)
     const dispatch=useDispatch()
     
     
@@ -17,6 +18,7 @@ const Product = () => {
    },[])
    const data=useSelector((state)=>state.data.data)
    console.log(data)
+   //const form =useSelector((state)=>state.form)
    //console.log(dispatch)
 //    const handleCost =(cost)=>{
 //     let item=[...data]
@@ -42,9 +44,22 @@ const Product = () => {
     
     
   return (
+    <>
     <div  style={{display:"flex" ,flexWrap:"wrap", marginLeft:"20%", gap:"5%"}}>
     {
-        data.map((e)=>{
+        data?.filter((e)=>{
+          if (form == "") return e;
+        else if (
+          e.name?.toLowerCase().includes(form?.toLowerCase()) ||
+          e.price?.includes(form)
+        ) {
+          return e;
+        }
+      })
+        
+
+
+        .map((e)=>{
             return (
                 <div key={e.id} >
                 <img  src={e.image1} alt="product image"/>
@@ -62,6 +77,7 @@ const Product = () => {
     
     
     </div>
+    </>
   )
 }
 

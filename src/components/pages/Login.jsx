@@ -7,13 +7,14 @@ import { Navigate } from 'react-router-dom';
 
 
  export default function Login() {
-  const[username,setUsername]=useState("");
+  const[email,setEmail]=useState("");
   const[password,setPassword]=useState("");
   const dispatch=useDispatch()
-  let {isAuthenticated}=useSelector((state)=>state.login)
+  const {isAuthenticated}=useSelector((state)=>state.login)
+  console.log(isAuthenticated)
   const handleLogin=()=>{
     const payload={
-      username,
+      email,
       password
     };
     console.log(payload)
@@ -23,18 +24,18 @@ import { Navigate } from 'react-router-dom';
   
  
 
-  //  if(isAuthenticated){
-  //   return <Navigate to="/"/>
-  //  }
+   if(isAuthenticated){
+    return <Navigate to="/"/>
+   }
   return (
     <div>
     <img src="https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_400,c_limit,fl_progressive/assets/images/2022/3/16/d4edb37c-aee8-4989-86f4-33b117edd4bc1647415464555-Banner_Login-Landing-page--1-.jpg" alt=''/>
     <TextField
           required
           id="outlined-disabled"
-          name='username'
-          placeholder='username'
-          onChange={(e)=>setUsername(e.target.value)}
+          name='email'
+          placeholder='email'
+          onChange={(e)=>setEmail(e.target.value)}
           
         /><br/>
         <TextField
@@ -47,7 +48,8 @@ import { Navigate } from 'react-router-dom';
       /><br/>
         <p>By continuing ,I agree to the <span style={{color:"deeppink"}}>Term of Use & Privacy Policy</span></p>
         <Button variant="contained"  style={{backgroundColor:"deeppink"}} onClick={handleLogin}>continue</Button>
-<p>Have troble logging in? <span style={{color:"deeppink"}}>Get help</span></p>
+<p>Have troble logging in? <span style={{color:"deeppink"}}>Get help</span>email": "eve.holt@reqres.in",
+"password": "cityslicka"</p>
 
     
     </div>

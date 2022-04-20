@@ -1,5 +1,7 @@
 import SearchIcon from '@mui/icons-material/Search';
 import { makeStyles, InputBase, Box } from "@material-ui/core";
+import { useDispatch } from 'react-redux';
+import { useState } from 'react';
 
 const useStyle = makeStyles({
   search: {
@@ -30,6 +32,13 @@ const useStyle = makeStyles({
 
 export const Searchbar = () => {
   const classes = useStyle();
+  const [form,setForm]=useState("");
+  const dispatch=useDispatch()
+  // dispatch(JSON.stringify(form))
+  const handleInput = (e) => {
+    setForm(e.target.value);
+  };
+  console.log(form)
 
   return (
     <div className={classes.search}>
@@ -44,6 +53,7 @@ export const Searchbar = () => {
           input: classes.inputInput,
         }}
         inputProps={{ "aria-label": "search" }}
+        onChange={handleInput}
       />
     </div>
   );

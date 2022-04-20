@@ -17,13 +17,14 @@ export const loginFailure=()=>({
 
 export const login =(payload)=>(dispatch)=>{
     dispatch(loginLoading)
-    fetch("http://localhost:3000/users",{
+    fetch("https://reqres.in/api/login",{
       method:"POST",
       body:JSON.stringify(payload),
       headers:{
         "Content-Type":"application/json"
       }
     }).then((res)=>res.json())
-    .then((res)=> dispatch(loginSuccess({username:payload.username,token:res.token})))
+    .then((res)=> dispatch(loginSuccess({token:res})))
+    
     .catch((err)=>dispatch(loginFailure()))
   }

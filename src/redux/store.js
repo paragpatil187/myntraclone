@@ -8,7 +8,6 @@ const rootReducer=combineReducers({
     login : loginReducer
     
 })
-const store=createStore(rootReducer
-    //compose( applyMiddleware(thunk))
+const store=createStore(rootReducer,applyMiddleware(thunk)
 )
 export {store}
