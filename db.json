@@ -1,512 +1,147 @@
-{
-  "products":
-  [{
-    "id": 1,
-    "product_name": "Hot Choc Vending",
-    "price": "$4173.57",
-    "image": "http://dummyimage.com/197x194.png/cc0000/ffffff"
-  }, {
-    "id": 2,
-    "product_name": "Peppercorns - Green",
-    "price": "$2154.99",
-    "image": "http://dummyimage.com/199x142.png/cc0000/ffffff"
-  }, {
-    "id": 3,
-    "product_name": "Vinegar - Sherry",
-    "price": "$3635.29",
-    "image": "http://dummyimage.com/194x211.png/5fa2dd/ffffff"
-  }, {
-    "id": 4,
-    "product_name": "Spice - Chili Powder Mexican",
-    "price": "$4766.97",
-    "image": "http://dummyimage.com/238x184.png/dddddd/000000"
-  }, {
-    "id": 5,
-    "product_name": "Lettuce - Escarole",
-    "price": "$3752.35",
-    "image": "http://dummyimage.com/248x158.png/dddddd/000000"
-  }, {
-    "id": 6,
-    "product_name": "Spic And Span All Purpose",
-    "price": "$3074.67",
-    "image": "http://dummyimage.com/102x115.png/ff4444/ffffff"
-  }, {
-    "id": 7,
-    "product_name": "Guava",
-    "price": "$4077.34",
-    "image": "http://dummyimage.com/135x160.png/cc0000/ffffff"
-  }, {
-    "id": 8,
-    "product_name": "Soup - Campbells Beef Strogonoff",
-    "price": "$2486.62",
-    "image": "http://dummyimage.com/211x227.png/cc0000/ffffff"
-  }, {
-    "id": 9,
-    "product_name": "Milk - Chocolate 500ml",
-    "price": "$1156.57",
-    "image": "http://dummyimage.com/200x171.png/cc0000/ffffff"
-  }, {
-    "id": 10,
-    "product_name": "Chicken Breast Wing On",
-    "price": "$1685.34",
-    "image": "http://dummyimage.com/173x163.png/5fa2dd/ffffff"
-  }, {
-    "id": 11,
-    "product_name": "Peach - Fresh",
-    "price": "$4097.72",
-    "image": "http://dummyimage.com/143x182.png/5fa2dd/ffffff"
-  }, {
-    "id": 12,
-    "product_name": "Rum - Coconut, Malibu",
-    "price": "$4937.98",
-    "image": "http://dummyimage.com/151x189.png/cc0000/ffffff"
-  }, {
-    "id": 13,
-    "product_name": "Carbonated Water - Orange",
-    "price": "$3310.83",
-    "image": "http://dummyimage.com/154x112.png/cc0000/ffffff"
-  }, {
-    "id": 14,
-    "product_name": "Beer - Upper Canada Lager",
-    "price": "$3495.55",
-    "image": "http://dummyimage.com/162x191.png/ff4444/ffffff"
-  }, {
-    "id": 15,
-    "product_name": "Coffee - Ristretto Coffee Capsule",
-    "price": "$3821.22",
-    "image": "http://dummyimage.com/133x188.png/cc0000/ffffff"
-  }, {
-    "id": 16,
-    "product_name": "Stainless Steel Cleaner Vision",
-    "price": "$4723.62",
-    "image": "http://dummyimage.com/171x149.png/ff4444/ffffff"
-  }, {
-    "id": 17,
-    "product_name": "Beer - Blue Light",
-    "price": "$1898.25",
-    "image": "http://dummyimage.com/245x115.png/ff4444/ffffff"
-  }, {
-    "id": 18,
-    "product_name": "Trueblue - Blueberry",
-    "price": "$4999.94",
-    "image": "http://dummyimage.com/163x151.png/cc0000/ffffff"
-  }, {
-    "id": 19,
-    "product_name": "Barley - Pearl",
-    "price": "$3094.09",
-    "image": "http://dummyimage.com/104x167.png/dddddd/000000"
-  }, {
-    "id": 20,
-    "product_name": "Chicken Breast Wing On",
-    "price": "$1868.23",
-    "image": "http://dummyimage.com/115x175.png/ff4444/ffffff"
-  }, {
-    "id": 21,
-    "product_name": "Pork - Smoked Back Bacon",
-    "price": "$2540.77",
-    "image": "http://dummyimage.com/150x163.png/cc0000/ffffff"
-  }, {
-    "id": 22,
-    "product_name": "Ecolab - Orange Frc, Cleaner",
-    "price": "$1792.95",
-    "image": "http://dummyimage.com/197x107.png/cc0000/ffffff"
-  }, {
-    "id": 23,
-    "product_name": "Nori Sea Weed",
-    "price": "$2906.53",
-    "image": "http://dummyimage.com/248x110.png/cc0000/ffffff"
-  }, {
-    "id": 24,
-    "product_name": "Lamb - Whole Head Off,nz",
-    "price": "$4459.42",
-    "image": "http://dummyimage.com/249x129.png/ff4444/ffffff"
-  }, {
-    "id": 25,
-    "product_name": "Soupcontfoam16oz 116con",
-    "price": "$4704.40",
-    "image": "http://dummyimage.com/196x224.png/dddddd/000000"
-  }, {
-    "id": 26,
-    "product_name": "Soup - Campbells",
-    "price": "$1492.40",
-    "image": "http://dummyimage.com/198x135.png/5fa2dd/ffffff"
-  }, {
-    "id": 27,
-    "product_name": "Daves Island Stinger",
-    "price": "$3240.23",
-    "image": "http://dummyimage.com/202x159.png/dddddd/000000"
-  }, {
-    "id": 28,
-    "product_name": "Tomato - Peeled Italian Canned",
-    "price": "$3534.51",
-    "image": "http://dummyimage.com/151x160.png/cc0000/ffffff"
-  }, {
-    "id": 29,
-    "product_name": "Appetizer - Southwestern",
-    "price": "$1702.05",
-    "image": "http://dummyimage.com/160x110.png/cc0000/ffffff"
-  }, {
-    "id": 30,
-    "product_name": "Red Pepper Paste",
-    "price": "$4789.86",
-    "image": "http://dummyimage.com/248x110.png/dddddd/000000"
-  }, {
-    "id": 31,
-    "product_name": "Bread - Corn Muffaleta Onion",
-    "price": "$1080.59",
-    "image": "http://dummyimage.com/100x173.png/cc0000/ffffff"
-  }, {
-    "id": 32,
-    "product_name": "Wine - Peller Estates Late",
-    "price": "$4431.90",
-    "image": "http://dummyimage.com/128x222.png/5fa2dd/ffffff"
-  }, {
-    "id": 33,
-    "product_name": "Spring Roll Veg Mini",
-    "price": "$4685.69",
-    "image": "http://dummyimage.com/247x250.png/ff4444/ffffff"
-  }, {
-    "id": 34,
-    "product_name": "Shrimp - 21/25, Peel And Deviened",
-    "price": "$2047.72",
-    "image": "http://dummyimage.com/216x178.png/ff4444/ffffff"
-  }, {
-    "id": 35,
-    "product_name": "Pork - Liver",
-    "price": "$1795.97",
-    "image": "http://dummyimage.com/132x180.png/ff4444/ffffff"
-  }, {
-    "id": 36,
-    "product_name": "Mushroom - Chantrelle, Fresh",
-    "price": "$4459.54",
-    "image": "http://dummyimage.com/215x209.png/cc0000/ffffff"
-  }, {
-    "id": 37,
-    "product_name": "Bandage - Finger Cots",
-    "price": "$1964.47",
-    "image": "http://dummyimage.com/221x132.png/cc0000/ffffff"
-  }, {
-    "id": 38,
-    "product_name": "Ocean Spray - Kiwi Strawberry",
-    "price": "$2402.52",
-    "image": "http://dummyimage.com/222x200.png/ff4444/ffffff"
-  }, {
-    "id": 39,
-    "product_name": "Onions Granulated",
-    "price": "$4545.67",
-    "image": "http://dummyimage.com/201x223.png/cc0000/ffffff"
-  }, {
-    "id": 40,
-    "product_name": "Bagels Poppyseed",
-    "price": "$2535.33",
-    "image": "http://dummyimage.com/189x134.png/dddddd/000000"
-  }, {
-    "id": 41,
-    "product_name": "Brocolinni - Gaylan, Chinese",
-    "price": "$2528.65",
-    "image": "http://dummyimage.com/216x155.png/dddddd/000000"
-  }, {
-    "id": 42,
-    "product_name": "Pasta - Fett Alfredo, Single Serve",
-    "price": "$2235.19",
-    "image": "http://dummyimage.com/184x183.png/5fa2dd/ffffff"
-  }, {
-    "id": 43,
-    "product_name": "Spice - Chili Powder Mexican",
-    "price": "$2353.57",
-    "image": "http://dummyimage.com/146x216.png/ff4444/ffffff"
-  }, {
-    "id": 44,
-    "product_name": "Wood Chips - Regular",
-    "price": "$3231.82",
-    "image": "http://dummyimage.com/245x217.png/5fa2dd/ffffff"
-  }, {
-    "id": 45,
-    "product_name": "Cheese - Roquefort Pappillon",
-    "price": "$4607.80",
-    "image": "http://dummyimage.com/177x118.png/5fa2dd/ffffff"
-  }, {
-    "id": 46,
-    "product_name": "Anchovy Paste - 56 G Tube",
-    "price": "$2336.29",
-    "image": "http://dummyimage.com/222x168.png/dddddd/000000"
-  }, {
-    "id": 47,
-    "product_name": "Red Pepper Paste",
-    "price": "$3850.79",
-    "image": "http://dummyimage.com/104x113.png/cc0000/ffffff"
-  }, {
-    "id": 48,
-    "product_name": "Tart - Raisin And Pecan",
-    "price": "$1609.37",
-    "image": "http://dummyimage.com/240x244.png/cc0000/ffffff"
-  }, {
-    "id": 49,
-    "product_name": "Cumin - Ground",
-    "price": "$4256.58",
-    "image": "http://dummyimage.com/106x224.png/cc0000/ffffff"
-  }, {
-    "id": 50,
-    "product_name": "Napkin White - Starched",
-    "price": "$4368.40",
-    "image": "http://dummyimage.com/100x200.png/cc0000/ffffff"
-  }, {
-    "id": 51,
-    "product_name": "Rice - Jasmine Sented",
-    "price": "$1406.08",
-    "image": "http://dummyimage.com/220x207.png/ff4444/ffffff"
-  }, {
-    "id": 52,
-    "product_name": "Quinoa",
-    "price": "$2136.01",
-    "image": "http://dummyimage.com/235x125.png/ff4444/ffffff"
-  }, {
-    "id": 53,
-    "product_name": "Capon - Whole",
-    "price": "$4143.65",
-    "image": "http://dummyimage.com/166x182.png/ff4444/ffffff"
-  }, {
-    "id": 54,
-    "product_name": "Stock - Beef, White",
-    "price": "$4481.39",
-    "image": "http://dummyimage.com/121x115.png/dddddd/000000"
-  }, {
-    "id": 55,
-    "product_name": "Cranberries - Frozen",
-    "price": "$3933.27",
-    "image": "http://dummyimage.com/142x157.png/5fa2dd/ffffff"
-  }, {
-    "id": 56,
-    "product_name": "Cumin - Whole",
-    "price": "$1244.32",
-    "image": "http://dummyimage.com/144x202.png/dddddd/000000"
-  }, {
-    "id": 57,
-    "product_name": "Wine - Redchard Merritt",
-    "price": "$4648.56",
-    "image": "http://dummyimage.com/183x201.png/dddddd/000000"
-  }, {
-    "id": 58,
-    "product_name": "Juice - Clam, 46 Oz",
-    "price": "$2382.52",
-    "image": "http://dummyimage.com/154x159.png/ff4444/ffffff"
-  }, {
-    "id": 59,
-    "product_name": "Mayonnaise",
-    "price": "$2763.96",
-    "image": "http://dummyimage.com/109x142.png/dddddd/000000"
-  }, {
-    "id": 60,
-    "product_name": "Wine - White, Cooking",
-    "price": "$2661.31",
-    "image": "http://dummyimage.com/152x113.png/cc0000/ffffff"
-  }, {
-    "id": 61,
-    "product_name": "Appetizer - Tarragon Chicken",
-    "price": "$4579.81",
-    "image": "http://dummyimage.com/185x224.png/dddddd/000000"
-  }, {
-    "id": 62,
-    "product_name": "Pastry - Choclate Baked",
-    "price": "$3108.21",
-    "image": "http://dummyimage.com/198x166.png/ff4444/ffffff"
-  }, {
-    "id": 63,
-    "product_name": "Pasta - Penne Primavera, Single",
-    "price": "$3675.16",
-    "image": "http://dummyimage.com/234x205.png/dddddd/000000"
-  }, {
-    "id": 64,
-    "product_name": "Beef - Flank Steak",
-    "price": "$3501.52",
-    "image": "http://dummyimage.com/213x152.png/cc0000/ffffff"
-  }, {
-    "id": 65,
-    "product_name": "Pasta - Fettuccine, Dry",
-    "price": "$3448.97",
-    "image": "http://dummyimage.com/182x205.png/ff4444/ffffff"
-  }, {
-    "id": 66,
-    "product_name": "Oil - Olive",
-    "price": "$2704.46",
-    "image": "http://dummyimage.com/142x136.png/ff4444/ffffff"
-  }, {
-    "id": 67,
-    "product_name": "Soy Protein",
-    "price": "$4619.73",
-    "image": "http://dummyimage.com/173x101.png/5fa2dd/ffffff"
-  }, {
-    "id": 68,
-    "product_name": "Muffin - Mix - Creme Brule 15l",
-    "price": "$2313.34",
-    "image": "http://dummyimage.com/195x102.png/5fa2dd/ffffff"
-  }, {
-    "id": 69,
-    "product_name": "Coconut - Shredded, Sweet",
-    "price": "$1808.79",
-    "image": "http://dummyimage.com/247x191.png/5fa2dd/ffffff"
-  }, {
-    "id": 70,
-    "product_name": "Shrimp - 21/25, Peel And Deviened",
-    "price": "$1856.09",
-    "image": "http://dummyimage.com/129x236.png/5fa2dd/ffffff"
-  }, {
-    "id": 71,
-    "product_name": "Shrimp - Black Tiger 6 - 8",
-    "price": "$4500.33",
-    "image": "http://dummyimage.com/102x222.png/ff4444/ffffff"
-  }, {
-    "id": 72,
-    "product_name": "Truffle Cups - White Paper",
-    "price": "$2126.25",
-    "image": "http://dummyimage.com/107x138.png/dddddd/000000"
-  }, {
-    "id": 73,
-    "product_name": "Flour - Semolina",
-    "price": "$3179.30",
-    "image": "http://dummyimage.com/167x110.png/cc0000/ffffff"
-  }, {
-    "id": 74,
-    "product_name": "Bread - Bistro White",
-    "price": "$2704.50",
-    "image": "http://dummyimage.com/112x137.png/ff4444/ffffff"
-  }, {
-    "id": 75,
-    "product_name": "Salmon Steak - Cohoe 8 Oz",
-    "price": "$1047.28",
-    "image": "http://dummyimage.com/110x103.png/ff4444/ffffff"
-  }, {
-    "id": 76,
-    "product_name": "Bok Choy - Baby",
-    "price": "$3345.31",
-    "image": "http://dummyimage.com/149x104.png/dddddd/000000"
-  }, {
-    "id": 77,
-    "product_name": "Bread - Frozen Basket Variety",
-    "price": "$1738.67",
-    "image": "http://dummyimage.com/197x194.png/dddddd/000000"
-  }, {
-    "id": 78,
-    "product_name": "Wine - Chateauneuf Du Pape",
-    "price": "$3658.17",
-    "image": "http://dummyimage.com/100x135.png/dddddd/000000"
-  }, {
-    "id": 79,
-    "product_name": "Thermometer Digital",
-    "price": "$4472.89",
-    "image": "http://dummyimage.com/183x244.png/ff4444/ffffff"
-  }, {
-    "id": 80,
-    "product_name": "Muffin Mix - Raisin Bran",
-    "price": "$3160.06",
-    "image": "http://dummyimage.com/142x227.png/dddddd/000000"
-  }, {
-    "id": 81,
-    "product_name": "Sparkling Wine - Rose, Freixenet",
-    "price": "$4999.29",
-    "image": "http://dummyimage.com/198x184.png/cc0000/ffffff"
-  }, {
-    "id": 82,
-    "product_name": "Sauce - Thousand Island",
-    "price": "$3778.28",
-    "image": "http://dummyimage.com/138x218.png/cc0000/ffffff"
-  }, {
-    "id": 83,
-    "product_name": "Bread - French Stick",
-    "price": "$4196.80",
-    "image": "http://dummyimage.com/244x173.png/ff4444/ffffff"
-  }, {
-    "id": 84,
-    "product_name": "Magnotta - Bel Paese White",
-    "price": "$4228.57",
-    "image": "http://dummyimage.com/100x163.png/5fa2dd/ffffff"
-  }, {
-    "id": 85,
-    "product_name": "Foam Espresso Cup Plain White",
-    "price": "$2038.36",
-    "image": "http://dummyimage.com/197x242.png/ff4444/ffffff"
-  }, {
-    "id": 86,
-    "product_name": "Godiva White Chocolate",
-    "price": "$1160.45",
-    "image": "http://dummyimage.com/180x149.png/5fa2dd/ffffff"
-  }, {
-    "id": 87,
-    "product_name": "Wine - White, Gewurtzraminer",
-    "price": "$3565.87",
-    "image": "http://dummyimage.com/172x235.png/5fa2dd/ffffff"
-  }, {
-    "id": 88,
-    "product_name": "Truffle Shells - White Chocolate",
-    "price": "$4660.92",
-    "image": "http://dummyimage.com/173x226.png/dddddd/000000"
-  }, {
-    "id": 89,
-    "product_name": "Squash - Butternut",
-    "price": "$3788.11",
-    "image": "http://dummyimage.com/143x200.png/5fa2dd/ffffff"
-  }, {
-    "id": 90,
-    "product_name": "Bread - Onion Focaccia",
-    "price": "$1965.50",
-    "image": "http://dummyimage.com/101x180.png/cc0000/ffffff"
-  }, {
-    "id": 91,
-    "product_name": "Syrup - Monin - Blue Curacao",
-    "price": "$1763.20",
-    "image": "http://dummyimage.com/105x178.png/dddddd/000000"
-  }, {
-    "id": 92,
-    "product_name": "Soup - Campbells Pasta Fagioli",
-    "price": "$3140.11",
-    "image": "http://dummyimage.com/123x147.png/5fa2dd/ffffff"
-  }, {
-    "id": 93,
-    "product_name": "Wine - Champagne Brut Veuve",
-    "price": "$4740.90",
-    "image": "http://dummyimage.com/167x222.png/dddddd/000000"
-  }, {
-    "id": 94,
-    "product_name": "Chicken - White Meat, No Tender",
-    "price": "$1078.71",
-    "image": "http://dummyimage.com/153x190.png/ff4444/ffffff"
-  }, {
-    "id": 95,
-    "product_name": "Ostrich - Prime Cut",
-    "price": "$2599.51",
-    "image": "http://dummyimage.com/119x102.png/dddddd/000000"
-  }, {
-    "id": 96,
-    "product_name": "Napkin - Beverge, White 2 - Ply",
-    "price": "$2461.89",
-    "image": "http://dummyimage.com/188x118.png/dddddd/000000"
-  }, {
-    "id": 97,
-    "product_name": "Potatoes - Instant, Mashed",
-    "price": "$4327.05",
-    "image": "http://dummyimage.com/207x229.png/ff4444/ffffff"
-  }, {
-    "id": 98,
-    "product_name": "Rabbit - Frozen",
-    "price": "$2681.58",
-    "image": "http://dummyimage.com/239x123.png/5fa2dd/ffffff"
-  }, {
-    "id": 99,
-    "product_name": "Meldea Green Tea Liquor",
-    "price": "$1667.40",
-    "image": "http://dummyimage.com/217x145.png/dddddd/000000"
-  }, {
-    "id": 100,
-    "product_name": "Ham - Smoked, Bone - In",
-    "price": "$4729.49",
-    "image": "http://dummyimage.com/181x180.png/ff4444/ffffff"
-  }],
-  "users":[
-    {
-      "username":"parag",
-      "password":"123456",
-      "token":"123456"
-    }
-
-  ]
+{"products": [
+  {
+      "id": "j1",
+      "name": "Sap Green Twill Jacket",
+      "price": "3049",
+      "image1": "https://images.bewakoof.com/t540/sap-green-twill-jacket-aw-21-367105-1637319099-1.jpg",
+      "image2": "https://images.bewakoof.com/t540/sap-green-twill-jacket-aw-21-367105-1637319102-2.jpg",
+      "image3": "https://images.bewakoof.com/t540/sap-green-twill-jacket-aw-21-367105-1637319106-3.jpg",
+      "image4": "https://images.bewakoof.com/t540/sap-green-twill-jacket-aw-21-367105-1637319109-4.jpg",
+      "image5": "https://images.bewakoof.com/t540/sap-green-twill-jacket-aw-21-367105-1637319113-5.jpg",
+      "desc": "Make a remarkable appearance with this Men's Fashion Twill Winter Jacket. Style it with all your casual outfits and loafers or sports shoes for an effortlessly stylish look.\nCountry of Origin : India",
+      "tribe": "120",
+      "discount": "57"
+  },
+  {
+      "id": "j2",
+      "name": "Light Pink Twill Jacket",
+      "price": "3049",
+      "image1": "https://images.bewakoof.com/t540/l-pink-twill-jacket-aw-21-367104-1637147387-1.jpg",
+      "image2": "https://images.bewakoof.com/t540/l-pink-twill-jacket-aw-21-367104-1637147391-2.jpg",
+      "image3": "https://images.bewakoof.com/t540/l-pink-twill-jacket-aw-21-367104-1637147394-3.jpg",
+      "image4": "https://images.bewakoof.com/t540/l-pink-twill-jacket-aw-21-367104-1637147398-4.jpg",
+      "image5": "https://images.bewakoof.com/t540/l-pink-twill-jacket-aw-21-367104-1637147401-5.jpg",
+      "desc": "Leave no room for chills in this Light Pink Twill Jacket. Style this jacket with a pair of denims and sneakers for a stylish look. Ditch the heater, your outfit's gonna create enough heat!",
+      "tribe": "80",
+      "discount": "67"
+  },
+  {
+      "id": "j3",
+      "name": "Lemon Curry Twill Jacket",
+      "price": "3049",
+      "image1": "https://images.bewakoof.com/t540/lemon-curry-twill-jacket-aw-21-391580-1639043325-1.jpg",
+      "image2": "https://images.bewakoof.com/t540/lemon-curry-twill-jacket-aw-21-391580-1639043329-2.jpg",
+      "image3": "https://images.bewakoof.com/t540/lemon-curry-twill-jacket-aw-21-391580-1639043332-3.jpg",
+      "image4": "https://images.bewakoof.com/t540/lemon-curry-twill-jacket-aw-21-391580-1639043336-4.jpg",
+      "image5": "https://images.bewakoof.com/t540/lemon-curry-twill-jacket-aw-21-391580-1639043339-5.jpg",
+      "desc": "Regular fit - Falls loosely on the body Twill,100% Cotton Soft & Durable",
+      "tribe": "80",
+      "discount": "67"
+  },
+  {
+      "id": "j4",
+      "name": "Black Plus Size Puffer",
+      "price": "3649",
+      "image1": "https://images.bewakoof.com/t540/black-plus-size-puffer-jacket-364914-1642433427-1.jpg",
+      "image2": "https://images.bewakoof.com/t540/black-plus-size-puffer-jacket-364914-1642433431-2.jpg",
+      "image3": "https://images.bewakoof.com/t540/black-plus-size-puffer-jacket-364914-1642433435-3.jpg",
+      "image4": "https://images.bewakoof.com/t540/black-plus-size-puffer-jacket-364914-1642433439-4.jpg",
+      "image5": "https://images.bewakoof.com/t540/black-plus-size-puffer-jacket-364914-1642433443-5.jpg",
+      "desc": "Flaunt your hot sassy looks in this Black Mens Plus Size Puffer Jacket. Be upbeat, match this puffer jacket with funky bag, trousers and some warm comfy boots and level up your style game.",
+      "tribe": "100",
+      "discount": "64"
+  },
+  {
+      "id": "j5",
+      "name": "Yellow Reverssible Puffer Jacket",
+      "price": "3349",
+      "image1": "https://images.bewakoof.com/t540/royal-blue-gold-sleeveless-puffer-jacket-aw-21-410313-1638435504-1.jpg",
+      "image2": "https://images.bewakoof.com/t540/royal-blue-gold-sleeveless-puffer-jacket-aw-21-410313-1638435507-2.jpg",
+      "image3": "https://images.bewakoof.com/t540/royal-blue-gold-sleeveless-puffer-jacket-aw-21-410313-1638435511-3.jpg",
+      "image4": "https://images.bewakoof.com/t540/royal-blue-gold-sleeveless-puffer-jacket-aw-21-410313-1638435514-4.jpg",
+      "image5": "https://images.bewakoof.com/t540/royal-blue-gold-sleeveless-puffer-jacket-aw-21-410313-1638435518-5.jpg",
+      "desc": "An epitome of style and comfort this Blue Color Block Puffer Jacket is a must-have Style it with jeans and same coloured sneakers for the most intensifying appearance.",
+      "tribe": "100",
+      "discount": "61"
+  },
+  {
+      "id": "j6",
+      "name": "Camo Bomber Jackets",
+      "price": "3349",
+      "image1": "https://images.bewakoof.com/t540/olive-camo-bomber-jackets-aw-21-368765-1639646268-1.jpg",
+      "image2": "https://images.bewakoof.com/t540/olive-camo-bomber-jackets-aw-21-368765-1639646272-2.jpg",
+      "image3": "https://images.bewakoof.com/t540/olive-camo-bomber-jackets-aw-21-368765-1639646275-3.jpg",
+      "image4": "https://images.bewakoof.com/t540/olive-camo-bomber-jackets-aw-21-368765-1639646279-4.jpg",
+      "image5": "https://images.bewakoof.com/t540/olive-camo-bomber-jackets-aw-21-368765-1639646282-5.jpg",
+      "desc": "Regular fit - Fits just right - not too tight, not too loose.100% Polyester Light Weight, Soft & Durab",
+      "tribe": "80",
+      "discount": "70"
+  },
+  {
+      "id": "j7",
+      "name": "Black Puffer Hoodie Jacket",
+      "price": "₹3299",
+      "image1": "https://images.bewakoof.com/t540/black-puffer-jacket-aw-21-364956-1634190921-1.jpg",
+      "image2": "https://images.bewakoof.com/t540/black-puffer-jacket-aw-21-364956-1634190927-2.jpg",
+      "image3": "https://images.bewakoof.com/t540/black-puffer-jacket-aw-21-364956-1634190933-3.jpg",
+      "image4": "https://images.bewakoof.com/t540/black-puffer-jacket-aw-21-364956-1634190940-4.jpg",
+      "image5": "https://images.bewakoof.com/t540/black-puffer-jacket-aw-21-364956-1634190945-5.jpg",
+      "desc": "Regular fit - Fits just right - not too tight, not too loose.",
+      "tribe": "100",
+      "discount": "63"
+  },
+  {
+      "id": "j8",
+      "name": "Navy Blue Plus Size Windcheater Jackets",
+      "price": "₹3349",
+      "image1": "https://images.bewakoof.com/t540/navy-blue-plus-size-windcheater-jackets-368673-1642433752-1.jpg",
+      "image2": "https://images.bewakoof.com/t540/navy-blue-plus-size-windcheater-jackets-368673-1642433756-2.jpg",
+      "image3": "https://images.bewakoof.com/t540/navy-blue-plus-size-windcheater-jackets-368673-1642433759-3.jpg",
+      "image4": "https://images.bewakoof.com/t540/navy-blue-plus-size-windcheater-jackets-368673-1642433766-4.jpg",
+      "image5": "https://images.bewakoof.com/t540/navy-blue-plus-size-windcheater-jackets-368673-1642433770-5.jpg",
+      "desc": "Oversized fit - Falls loosely on the body",
+      "tribe": "₹80",
+      "discount": "68"
+  },
+  {
+      "id": "j9",
+      "name": "Navy Blue Plus Size Windcheater Jackets",
+      "price": "3349",
+      "image1": "https://images.bewakoof.com/t540/navy-blue-plus-size-windcheater-jackets-368673-1642433752-1.jpg",
+      "image2": "https://images.bewakoof.com/t540/navy-blue-plus-size-windcheater-jackets-368673-1642433756-2.jpg",
+      "image3": "https://images.bewakoof.com/t540/navy-blue-plus-size-windcheater-jackets-368673-1642433759-3.jpg",
+      "image4": "https://images.bewakoof.com/t540/navy-blue-plus-size-windcheater-jackets-368673-1642433766-4.jpg",
+      "image5": "https://images.bewakoof.com/t540/navy-blue-plus-size-windcheater-jackets-368673-1642433770-5.jpg",
+      "desc": "Oversized fit - Falls loosely on the body",
+      "tribe": " ₹80",
+      "discount": "68"
+  },
+  {
+      "id": "j10",
+      "name": "Royal Blue Hoodie Puffer Jacket",
+      "price": "3299",
+      "image1": "https://images.bewakoof.com/t540/d-blue-puffer-jacket-aw-21-364933-1634198862-1.jpg",
+      "image2": "https://images.bewakoof.com/t540/d-blue-puffer-jacket-aw-21-364933-1634198869-2.jpg",
+      "image3": "https://images.bewakoof.com/t540/d-blue-puffer-jacket-aw-21-364933-1634198875-3.jpg",
+      "image4": "https://images.bewakoof.com/t540/d-blue-puffer-jacket-aw-21-364933-1634198881-4.jpg",
+      "image5": "https://images.bewakoof.com/t540/d-blue-puffer-jacket-aw-21-364933-1634198887-5.jpg",
+      "desc": "Regular fit - Fits just right - not too tight, not too loose.",
+      "tribe": "₹100",
+      "discount": "60"
+  },
+  {
+      "id": "j11",
+      "name": "Royal Blue Hoodie Puffer Jacket",
+      "price": "3299",
+      "image1": "https://images.bewakoof.com/t540/d-blue-puffer-jacket-aw-21-364933-1634198862-1.jpg",
+      "image2": "https://images.bewakoof.com/t540/d-blue-puffer-jacket-aw-21-364933-1634198869-2.jpg",
+      "image3": "https://images.bewakoof.com/t540/d-blue-puffer-jacket-aw-21-364933-1634198875-3.jpg",
+      "image4": "https://images.bewakoof.com/t540/d-blue-puffer-jacket-aw-21-364933-1634198881-4.jpg",
+      "image5": "https://images.bewakoof.com/t540/d-blue-puffer-jacket-aw-21-364933-1634198887-5.jpg",
+      "desc": "Regular fit - Fits just right - not too tight, not too loose.",
+      "tribe": "₹100",
+      "discount": "60"
+  }
+]
 }
+

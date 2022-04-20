@@ -14,7 +14,7 @@ function App() {
   return (
     <div className="App">
     <Routes>
-    <Route path="/" element={<PrivateRoute isAuthenticated={isAuthenticated}><Home/></PrivateRoute>}></Route>
+    <Route path="/" element={<PrivateRoute isAuthenticated={true}><Home/></PrivateRoute>}></Route>
     <Route path="/login" element={<Login/>}></Route>
     
     </Routes>

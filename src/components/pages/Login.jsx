@@ -10,7 +10,7 @@ import { Navigate } from 'react-router-dom';
   const[username,setUsername]=useState("");
   const[password,setPassword]=useState("");
   const dispatch=useDispatch()
-  const {isAuthenticated}=useSelector((state)=>state.login)
+  let {isAuthenticated}=useSelector((state)=>state.login)
   const handleLogin=()=>{
     const payload={
       username,
@@ -18,10 +18,14 @@ import { Navigate } from 'react-router-dom';
     };
     console.log(payload)
     dispatch(login(payload))
+    
   }
-   if(isAuthenticated){
-    return <Navigate to="/"/>
-   }
+  
+ 
+
+  //  if(isAuthenticated){
+  //   return <Navigate to="/"/>
+  //  }
   return (
     <div>
     <img src="https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_400,c_limit,fl_progressive/assets/images/2022/3/16/d4edb37c-aee8-4989-86f4-33b117edd4bc1647415464555-Banner_Login-Landing-page--1-.jpg" alt=''/>

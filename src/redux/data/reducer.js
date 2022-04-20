@@ -1,14 +1,14 @@
-import { STORE_DATA } from "./actionTypes"
+import { STORE_DATA } from "./action";
+
 
 const initState={
     data:[]
 }
-const reducer=(state=initState,action)=>{
-    switch(action.type){
+export const productReducer=(store=initState,{type,payload})=>{
+    switch(type){
         case STORE_DATA:
-            return{...state,data:action.payload}
+            return{...store,data:payload}
             default:
-                return state;
+                return store;
     }
 }
-export {reducer}

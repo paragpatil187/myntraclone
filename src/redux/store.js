@@ -1,12 +1,14 @@
 
-import { createStore,applyMiddleware,combineReducers } from "redux";
-import {reducer} from "../redux/data/reducer"
+import { createStore,applyMiddleware,combineReducers, compose } from "redux";
+import { productReducer } from "./Data/reducer";
 import thunk from "redux-thunk";
 import { loginReducer } from "./Login/reducer";
-
 const rootReducer=combineReducers({
-    login:loginReducer,
-    product:reducer
+    data : productReducer,
+    login : loginReducer
+    
 })
-const store=createStore(rootReducer,applyMiddleware(thunk))
+const store=createStore(rootReducer
+    //compose( applyMiddleware(thunk))
+)
 export {store}
