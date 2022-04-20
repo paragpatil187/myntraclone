@@ -47,19 +47,19 @@ const Product = ({form}) => {
     <>
     <div  style={{display:"flex" ,flexWrap:"wrap", marginLeft:"20%", gap:"5%"}}>
     {
-        data?.filter((e)=>{
-          if (form == "") return e;
-        else if (
-          e.name?.toLowerCase().includes(form?.toLowerCase()) ||
-          e.price?.includes(form)
-        ) {
-          return e;
-        }
-      })
+      //   data?.filter((e)=>{
+      //     if (form == "") return e;
+      //   else if (
+      //     e.name?.toLowerCase().includes(form?.toLowerCase()) ||
+      //     e.price?.includes(form)
+      //   ) {
+      //     return e;
+      //   }
+      // })
         
 
 
-        .map((e)=>{
+        data.map((e)=>{
             return (
                 <div key={e.id} >
                 <img  src={e.image1} alt="product image"/>

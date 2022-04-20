@@ -9,6 +9,7 @@ function Home() {
     <Header/>
     <Product />
     <div>Home</div>
+    
     </>
   )
 }

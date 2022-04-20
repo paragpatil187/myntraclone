@@ -4,6 +4,7 @@ import {Routes,Route,Link, Navigate} from "react-router-dom"
 import Home from './components/Home';
 import Login from './components/pages/Login';
 import { useSelector } from 'react-redux';
+import Productdetails from './components/pages/Productdetails';
 const PrivateRoute=({isAuthenticated,children})=>{
   return isAuthenticated ? children:<Navigate to ="/login"/>
 }
@@ -14,9 +15,9 @@ function App() {
   return (
     <div className="App">
     <Routes>
-    <Route path="/" element={<PrivateRoute isAuthenticated={true}><Home/></PrivateRoute>}></Route>
+    <Route path="/" element={<PrivateRoute isAuthenticated={isAuthenticated}><Home/></PrivateRoute>}></Route>
     <Route path="/login" element={<Login/>}></Route>
-    
+    <Route path="/product/:id" element={<Productdetails/>}></Route>
     </Routes>
       
     </div>
