@@ -6,6 +6,7 @@ import storeData from '../redux/Data/action'
 
 
 const Product = ({form}) => {
+  const[category,setCategory]=useState("")
   const handleNavigate=(productId)=>{
     navigate(`product/${productId}`)
   }
@@ -53,6 +54,7 @@ const Product = ({form}) => {
   return (
     <>
     <div  style={{display:"flex" ,flexWrap:"wrap", marginLeft:"20%", gap:"5%"}}>
+    <Button onClick={()=>{setCategory("shoes")}}>shoes</Button>
     {
       //   data?.filter((e)=>{
       //     if (form == "") return e;
@@ -66,7 +68,25 @@ const Product = ({form}) => {
         
 
 
-        data.map((e)=>{
+        
+          
+          
+          data.filter((e)=>{
+            if(category==""){
+              return e
+            }
+            else{
+              return e.categories==category
+            }
+
+          })
+
+
+          // else if(sorte=="htol"){
+          //   data.sort((a,b)=>b.cost-a.cost)
+          // }
+        
+        .map((e)=>{
             return (
                 <div key={e.id}  onClick={()=>handleNavigate(e.id)}>
                 <img  src={e.images.image1} alt="product image"/>
