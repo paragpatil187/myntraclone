@@ -25,6 +25,7 @@ const cards = [1, 2, 3, 4, 5];
 const theme = createTheme();
 
 export default function Productdetails() {
+  var navigate=useNavigate()
   const params = useParams();
   const idx = params.id;
   console.log(idx);
@@ -32,9 +33,9 @@ export default function Productdetails() {
   const data = useSelector((state) => state.data.data);
   console.log("product", data);
 
-  console.log("data", data[0].id);
+  
   var po=data.filter((x) => {
-  if(x.id === idx){
+  if(+x.id === +idx){
     return x
   }})
   console.log("po",po)
@@ -51,7 +52,26 @@ export default function Productdetails() {
     <div>
     {po.map((e)=>{
       return(
+        <div>
         <h1>{e.title}</h1>
+        <img src={e.images.image1}/>
+        <img src={e.images.image2}/>
+        <img src={e.images.image3}/>
+        <img src={e.images.image4}/>
+        <h1>{e.desc}</h1>  
+        <p>{e.price}</p> 
+        <p>{e.color}</p>
+        <p>{e.rating}</p>
+        <p>{e.price}</p>
+        <p>{e.discount}</p> 
+        <Button>add to cart</Button> 
+        <Button>add to wishlist</Button>
+        <Button onClick={()=>{navigate("/")}}>go to home</Button>
+        
+        
+        
+        </div>
+
       )
     })}
     </div>
