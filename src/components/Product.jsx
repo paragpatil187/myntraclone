@@ -7,7 +7,8 @@ import storeData from '../redux/Data/action'
 
 
 const Product = ({form}) => {
-  const[category,setCategory]=useState("")
+  const[category,setCategory]=useState("");
+  const[sorte,setSort]=useState("");
   const handleNavigate=(productId)=>{
     navigate(`product/${productId}`)
   }
@@ -65,6 +66,10 @@ const Product = ({form}) => {
     <Button onClick={()=>{setCategory("Men Footwear")}}>Men Footwear</Button>
     <Button onClick={()=>{setCategory("kurta")}}>kurta</Button>
     <Button onClick={()=>{setCategory("tshirt")}}>tshirt</Button>
+    <Button onClick={()=>{setCategory("")}}>removefilter</Button>
+    <Button onClick={()=>{setSort("ltoh")}}>ascending</Button>
+    <Button onClick={()=>{setSort("htol")}}>descending</Button>
+
     </Stack>
     {
       //   data?.filter((e)=>{
@@ -97,6 +102,17 @@ const Product = ({form}) => {
             }
             else{
               return e.title.toLowerCase().includes(search.toLowerCase())
+            }
+          })
+          .sort((a,b)=>{
+            if(sorte==""){
+              return 
+            }
+            else if(sorte=="ltoh"){
+              return a.price-b.price
+            }
+            else if(sorte=="htol"){
+              return b.price-a.price
             }
           })
 
