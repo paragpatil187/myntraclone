@@ -3,7 +3,7 @@ import { LOGIN_FAILURE, LOGIN_LOADING, LOGIN_SUCCESS } from "./action";
 const initState = {
   loading: false,
   error: false,
-  isAuthenticated: false,
+  isAuthenticated: true,
   token: "",
   username: "",
 };

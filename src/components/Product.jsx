@@ -1,10 +1,17 @@
 import { Button } from '@material-ui/core'
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
+import { useNavigate, useParams } from 'react-router-dom'
 import storeData from '../redux/Data/action'
 
 
 const Product = ({form}) => {
+  const handleNavigate=(productId)=>{
+    navigate(`product/${productId}`)
+  }
+  const navigate=useNavigate()
+    const params=useParams();
+        console.log(params.id)
   console.log(form)
     const dispatch=useDispatch()
     
@@ -61,8 +68,8 @@ const Product = ({form}) => {
 
         data.map((e)=>{
             return (
-                <div key={e.id} >
-                <img  src={e.image1} alt="product image"/>
+                <div key={e.id}  onClick={()=>handleNavigate(e.id)}>
+                <img  src={e.images.image1} alt="product image"/>
                 
                 <h1>{e.name}</h1>
                 <p>{e.price}</p>

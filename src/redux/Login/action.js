@@ -24,7 +24,7 @@ export const login =(payload)=>(dispatch)=>{
         "Content-Type":"application/json"
       }
     }).then((res)=>res.json())
-    .then((res)=> dispatch(loginSuccess({token:res})))
+    .then((res)=> dispatch(loginSuccess({token:res.token})))
     
     .catch((err)=>dispatch(loginFailure()))
   }
