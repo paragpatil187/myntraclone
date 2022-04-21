@@ -1,4 +1,5 @@
 import { Button } from '@material-ui/core'
+import { Stack } from '@mui/material'
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate, useParams } from 'react-router-dom'
@@ -26,6 +27,8 @@ const Product = ({form}) => {
    },[])
    const data=useSelector((state)=>state.data.data)
    console.log(data)
+    const search=useSelector((state)=>state.data.search)
+   console.log("s",search)
    //const form =useSelector((state)=>state.form)
    //console.log(dispatch)
 //    const handleCost =(cost)=>{
@@ -53,8 +56,16 @@ const Product = ({form}) => {
     
   return (
     <>
+    
     <div  style={{display:"flex" ,flexWrap:"wrap", marginLeft:"20%", gap:"5%"}}>
+    <Stack>
     <Button onClick={()=>{setCategory("shoes")}}>shoes</Button>
+    <Button onClick={()=>{setCategory("shirt")}}>shirt</Button>
+    <Button onClick={()=>{setCategory("Men Clothing")}}>Men Clothing</Button>
+    <Button onClick={()=>{setCategory("Men Footwear")}}>Men Footwear</Button>
+    <Button onClick={()=>{setCategory("kurta")}}>kurta</Button>
+    <Button onClick={()=>{setCategory("tshirt")}}>tshirt</Button>
+    </Stack>
     {
       //   data?.filter((e)=>{
       //     if (form == "") return e;
@@ -80,6 +91,14 @@ const Product = ({form}) => {
             }
 
           })
+          .filter((e)=>{
+            if(search==""){
+              return e
+            }
+            else{
+              return e.title.toLowerCase().includes(search.toLowerCase())
+            }
+          })
 
 
           // else if(sorte=="htol"){
@@ -91,7 +110,7 @@ const Product = ({form}) => {
                 <div key={e.id}  onClick={()=>handleNavigate(e.id)}>
                 <img  src={e.images.image1} alt="product image"/>
                 
-                <h1>{e.name}</h1>
+                <h1>{e.title}</h1>
                 <p>{e.price}</p>
                 <p>{e.discount}</p>
                 <button>add to cart</button>

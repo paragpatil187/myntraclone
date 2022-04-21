@@ -2,6 +2,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import { makeStyles, InputBase, Box } from "@material-ui/core";
 import { useDispatch } from 'react-redux';
 import { useState } from 'react';
+import { searchData } from '../../redux/Data/action';
 
 const useStyle = makeStyles({
   search: {
@@ -34,7 +35,7 @@ export const Searchbar = () => {
   const classes = useStyle();
   const [form,setForm]=useState("");
   const dispatch=useDispatch()
-  // dispatch(JSON.stringify(form))
+   dispatch(searchData(form))
   const handleInput = (e) => {
     setForm(e.target.value);
   };
