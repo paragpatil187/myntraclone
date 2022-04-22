@@ -3,20 +3,28 @@ import { Stack } from '@mui/material'
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate, useParams } from 'react-router-dom'
-import storeData from '../redux/Data/action'
+import storeData, { addCart } from '../redux/Data/action'
 
 
 const Product = ({form}) => {
   const[category,setCategory]=useState("");
   const[sorte,setSort]=useState("");
+  const dispatch=useDispatch()
   const handleNavigate=(productId)=>{
     navigate(`product/${productId}`)
+  }
+  const handleCart=(id)=>{
+    const payload={
+      id
+    }
+    dispatch(addCart(payload))
+
   }
   const navigate=useNavigate()
     const params=useParams();
         console.log(params.id)
   console.log(form)
-    const dispatch=useDispatch()
+    
     
     
     useEffect(()=>{
@@ -123,13 +131,13 @@ const Product = ({form}) => {
         
         .map((e)=>{
             return (
-                <div key={e.id}  onClick={()=>handleNavigate(e.id)}>
-                <img  src={e.images.image1} alt="product image"/>
+                <div key={e.id}  >
+                <img  src={e.images.image1} onClick={()=>handleNavigate(e.id)} alt="product image"/>
                 
                 <h1>{e.title}</h1>
                 <p>{e.price}</p>
                 <p>{e.discount}</p>
-                <button>add to cart</button>
+                <button onClick={()=>{handleCart(e.id)}}>add to cart</button>
                 <button>add to wishlist</button>
                 
                 </div>
