@@ -13,13 +13,31 @@ const Product = ({form}) => {
   const handleNavigate=(productId)=>{
     navigate(`product/${productId}`)
   }
-  const handleCart=(id)=>{
-    const payload={
-      id
-    }
-    dispatch(addCart(payload))
+  const data=useSelector((state)=>state.data.data)
+  console.log(data)
+  const handleCart=(idx)=>{
+    // let carter=data.filter((e)=>{
+    //   if(e.id==idx){
+    //     return e
+    //   }
+    // })
+    data.forEach((e)=>{
+      if(e.id==idx){
+        dispatch(addCart(e))
 
+      }
+
+    })
   }
+    //console.log("carter",carter)
+
+
+    //  const payload=[
+    //    carter
+    //  ]
+    
+
+  
   const navigate=useNavigate()
     const params=useParams();
         console.log(params.id)
@@ -34,8 +52,7 @@ const Product = ({form}) => {
         .catch((err)=>console.log(err))
        
    },[])
-   const data=useSelector((state)=>state.data.data)
-   console.log(data)
+  
     const search=useSelector((state)=>state.data.search)
    console.log("s",search)
    //const form =useSelector((state)=>state.form)

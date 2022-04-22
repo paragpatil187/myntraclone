@@ -1,4 +1,4 @@
-import { ADD_CART, SEARCH_DATA, STORE_DATA } from "./action";
+import { ADD_CART, DELETE_CART, SEARCH_DATA, STORE_DATA } from "./action";
 
 
 const initState={
@@ -14,7 +14,11 @@ export const productReducer=(store=initState,{type,payload})=>{
              case SEARCH_DATA:
                  return{...store,search:payload}
                  case ADD_CART:
-                    return {...store,cart:payload}; 
+                   var newCart = [...store.cart,payload]
+                    return{...store,cart:newCart}
+
+                    case DELETE_CART:
+                        return {...store,cart:payload}
             default:
                 return store;
     }
