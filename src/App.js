@@ -16,10 +16,10 @@ function App() {
   return (
     <div className="App">
     <Routes>
-    <Route path="/" element={<PrivateRoute isAuthenticated={isAuthenticated}><Home/></PrivateRoute>}></Route>
+    <Route path="/" element={<Home/>}></Route>
     <Route path="/login" element={<Login/>}></Route>
     <Route path="/product/:id" element={<Productdetails/>}></Route>
-    <Route path="/cart" element={<Cart/>}></Route>
+    <Route path="/cart" element={<PrivateRoute isAuthenticated={isAuthenticated}><Cart/></PrivateRoute>}></Route>
     </Routes>
       
     </div>

@@ -16,7 +16,8 @@ export const loginFailure=()=>({
 })
 
 export const login =(payload)=>(dispatch)=>{
-    dispatch(loginLoading)
+  dispatch(loginLoading())
+    dispatch(loginSuccess({token:123456,email:"parag"}))
     fetch("https://reqres.in/api/login",{
       method:"POST",
       body:JSON.stringify(payload),
@@ -24,7 +25,7 @@ export const login =(payload)=>(dispatch)=>{
         "Content-Type":"application/json"
       }
     }).then((res)=>res.json())
-    .then((res)=> dispatch(loginSuccess({token:res.token})))
+    .then((res)=> console.log(res))
     
     .catch((err)=>dispatch(loginFailure()))
   }

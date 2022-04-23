@@ -3,6 +3,7 @@ import { ConstructionOutlined } from '@mui/icons-material';
 import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { deleteCart, removeallcart } from '../../redux/Data/action';
+import { Header } from '../header/Header';
 
 const Cart = () => {
   const dispatch=useDispatch()
@@ -52,6 +53,7 @@ const handlecartRemove=(idx)=>{
 let x=cartproducts
   return (
     <div>
+    <Header/>
     <Button onClick={()=>handlecartDelete}>delete cart</Button>
     
      

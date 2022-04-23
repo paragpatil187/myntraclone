@@ -3,9 +3,9 @@ import { LOGIN_FAILURE, LOGIN_LOADING, LOGIN_SUCCESS } from "./action";
 const initState = {
   loading: false,
   error: false,
-  isAuthenticated: true,
+  isAuthenticated: false,
   token: "",
-  username: "",
+  email: "",
 };
 export const loginReducer = (store=initState, { type, payload }) => {
   switch (type) {
@@ -17,7 +17,7 @@ export const loginReducer = (store=initState, { type, payload }) => {
         error: false,
         isAuthenticated: true,
         token: payload.token,
-        username: payload.username,
+        email: payload.email,
       };
       case LOGIN_FAILURE:
           return{
@@ -25,7 +25,7 @@ export const loginReducer = (store=initState, { type, payload }) => {
               error: true,
         isAuthenticated: false,
         token: "",
-        username: "",
+        email: "",
           }
       default:return store;
   }
