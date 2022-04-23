@@ -1,0 +1,74 @@
+.maindiv{
+    display:flex;
+   
+    
+    
+}
+.buttondiv{
+    border:3px solid red;
+    width:15%;
+    
+
+}
+.imagesdiv{
+    border:3px solid green;
+    width:85%;
+    display:flex;
+    gap:5%;
+    flex-wrap:wrap;
+
+}
+.navbar2{
+    border:3px solid yellow;
+    margin-top:50px;
+    /* padding:40px; */
+    display:flex;
+
+}
+.images{
+    width:20%;
+    margin-top:5%;
+}
+.titlename{
+    font-size:1rem;
+}
+button{
+    background-color:tomato
+}
+.nameofitem{
+    font-size:10px;
+    overflow:hidden;
+    text-wrap:wrap;
+}
+
+.navbar2childdiv3{
+    border:2px solid red;
+    width: 33px%;
+    margin-top:30px;
+    display:flex;
+}
+.navbar2childdiv1{
+    border:2px solid red;
+    width:15%;
+}
+.navbar2childdiv2{
+    border:2px solid red;
+    width:64%;
+}
+.paginationBttns {
+      
+    color:blue;
+   list-style: none;
+   display: flex;
+   margin: auto;
+   gap: 5px;
+   cursor: pointer;
+   justify-content: space-around;
+   width:50%;
+   margin-top: 20px;
+   focus:border-radius;
+   
+
+ }
+ 
+

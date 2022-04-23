@@ -1,26 +1,33 @@
 import { Button } from '@material-ui/core'
-import { Stack } from '@mui/material'
+import { Pagination, Stack } from '@mui/material'
 import React, { useEffect, useState } from 'react'
+import ReactPaginate from 'react-paginate'
 import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate, useParams } from 'react-router-dom'
 import storeData, { addCart } from '../redux/Data/action'
 
+import "./product.css"
 
-const Product = ({form}) => {
+
+const Product = () => {
   const[category,setCategory]=useState("");
   const[sorte,setSort]=useState("");
+  const [page,setPage]=useState(0);
   const dispatch=useDispatch()
+  const itemLimit=8;
+const pagesVisited=page*itemLimit;
+const changePage=({selected})=>{
+  setPage(selected);
+};
+
   const handleNavigate=(productId)=>{
     navigate(`product/${productId}`)
   }
   const data=useSelector((state)=>state.data.data)
   console.log(data)
+  const pageTotal=Math.ceil(data.length/itemLimit);
+  
   const handleCart=(idx)=>{
-    // let carter=data.filter((e)=>{
-    //   if(e.id==idx){
-    //     return e
-    //   }
-    // })
     data.forEach((e)=>{
       if(e.id==idx){
         dispatch(addCart(e))
@@ -29,24 +36,18 @@ const Product = ({form}) => {
 
     })
   }
-    //console.log("carter",carter)
-
-
-    //  const payload=[
-    //    carter
-    //  ]
     
 
   
   const navigate=useNavigate()
     const params=useParams();
         console.log(params.id)
-  console.log(form)
+
     
     
     
     useEffect(()=>{
-        fetch("http://localhost:3000/products")
+        fetch("https://serverfakeappparag.herokuapp.com/products")
         .then((res)=>res.json())
         .then((res)=>dispatch(storeData(res)))
         .catch((err)=>console.log(err))
@@ -55,64 +56,35 @@ const Product = ({form}) => {
   
     const search=useSelector((state)=>state.data.search)
    console.log("s",search)
-   //const form =useSelector((state)=>state.form)
-   //console.log(dispatch)
-//    const handleCost =(cost)=>{
-//     let item=[...data]
-//      if(cost=="ltoh"){
-         
-//          item.sort((a,b)=>a.price - b.price);
-//          showData(item)
-//      }
-//      else{
-//      item.sort((a, b) => b.price - a.price);
-//      showData(item)
-//      }
-
-
-
- 
- 
-
-   
-    
-        
-    
-    
-    
   return (
     <>
+    <div className='navbar2'>
+    <div className='navbar2childdiv1'></div>
+    <div className='navbar2childdiv2'></div>
+    <div className='navbar2childdiv3'>sort by
+    <Button onClick={()=>{setSort("ltoh")}}>ascending</Button><br/>
+    <Button onClick={()=>{setSort("htol")}}>descending</Button><br/>
     
-    <div  style={{display:"flex" ,flexWrap:"wrap", marginLeft:"20%", gap:"5%"}}>
-    <Stack>
-    <Button onClick={()=>{setCategory("shoes")}}>shoes</Button>
-    <Button onClick={()=>{setCategory("shirt")}}>shirt</Button>
-    <Button onClick={()=>{setCategory("Men Clothing")}}>Men Clothing</Button>
-    <Button onClick={()=>{setCategory("Men Footwear")}}>Men Footwear</Button>
-    <Button onClick={()=>{setCategory("kurta")}}>kurta</Button>
-    <Button onClick={()=>{setCategory("tshirt")}}>tshirt</Button>
-    <Button onClick={()=>{setCategory("")}}>removefilter</Button>
-    <Button onClick={()=>{setSort("ltoh")}}>ascending</Button>
-    <Button onClick={()=>{setSort("htol")}}>descending</Button>
+    </div>
 
-    </Stack>
-    {
-      //   data?.filter((e)=>{
-      //     if (form == "") return e;
-      //   else if (
-      //     e.name?.toLowerCase().includes(form?.toLowerCase()) ||
-      //     e.price?.includes(form)
-      //   ) {
-      //     return e;
-      //   }
-      // })
-        
+    </div>
+    <div className='maindiv'>
+    <div className='buttondiv'>
+    <Button  onClick={()=>{setCategory("shoes")}}>shoes</Button><br/>
+    <Button onClick={()=>{setCategory("shirt")}}>shirt</Button><br/>
+    <Button onClick={()=>{setCategory("Men Clothing")}}>Men Clothing</Button><br/>
+    <Button onClick={()=>{setCategory("Men Footwear")}}>Men Footwear</Button><br/>
+    <Button onClick={()=>{setCategory("kurta")}}>kurta</Button><br/>
+    <Button onClick={()=>{setCategory("tshirt")}}>tshirt</Button><br/>
+    <Button onClick={()=>{setCategory("")}}>removefilter</Button><br/>
+     
 
-
-        
+    </div>
+    <div className='imagesdiv'>
+  {
+          data.slice(pagesVisited, pagesVisited + itemLimit)
           
-          
-          data.filter((e)=>{
+          .filter((e)=>{
             if(category==""){
               return e
             }
@@ -140,30 +112,36 @@ const Product = ({form}) => {
               return b.price-a.price
             }
           })
-
-
-          // else if(sorte=="htol"){
-          //   data.sort((a,b)=>b.cost-a.cost)
-          // }
-        
         .map((e)=>{
             return (
-                <div key={e.id}  >
+              
+                <div key={e.id}  className="images" >
                 <img  src={e.images.image1} onClick={()=>handleNavigate(e.id)} alt="product image"/>
                 
-                <h1>{e.title}</h1>
-                <p>{e.price}</p>
+                <p className='titlename'>{e.brand}</p>
+                <p className='nameofitem'>{e.title}</p>
+                <p> Rs {e.price}</p>
                 <p>{e.discount}</p>
-                <button onClick={()=>{handleCart(e.id)}}>add to cart</button>
-                <button>add to wishlist</button>
+                <button  onClick={()=>{handleCart(e.id)}}>ADD TO BAG</button>
                 
                 </div>
             )
         })
     }
+    </div>
+    
     
     
     </div>
+    
+    <ReactPaginate
+      previousLabel={"Previous"}
+      nextLabel={"Next"}
+      pageCount={pageTotal}
+      onPageChange={changePage}
+      containerClassName={"paginationBttns"}
+      theme="square-fill"
+    />
     </>
   )
 }
