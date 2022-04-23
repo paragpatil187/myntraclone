@@ -38,18 +38,18 @@ button{
 .nameofitem{
     font-size:10px;
     overflow:hidden;
-    text-wrap:wrap;
+    
 }
 
 .navbar2childdiv3{
-    border:2px solid red;
-    width: 33px%;
+    
+    width: 33%;
     margin-top:30px;
     display:flex;
 }
 .navbar2childdiv1{
-    border:2px solid red;
-    width:15%;
+    
+    width:20%;
 }
 .navbar2childdiv2{
     
@@ -66,7 +66,7 @@ button{
    justify-content: space-around;
    width:50%;
    margin-top: 20px;
-   focus:border-radius;
+   
    margin-top:7%;
    background-color:light-green;
    

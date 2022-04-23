@@ -1,0 +1,14 @@
+.maincart{
+    width:80%;
+    margin:auto;
+    margin-top:20%;
+    display: flex;
+    gap:5%
+    
+}
+.cartdiv{
+    width:80%;
+}
+.btns{
+    background-color: rgb(201, 17, 134);
+}

@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { deleteCart, removeallcart } from '../../redux/Data/action';
 import { Header } from '../header/Header';
-
+import "./cart.css"
 const Cart = () => {
   const dispatch=useDispatch()
   const data = useSelector((state) => state.data.data);
@@ -52,25 +52,30 @@ const handlecartRemove=(idx)=>{
 // console.log(cartproducts)
 let x=cartproducts
   return (
-    <div>
-    <Header/>
+    <>
     <Button onClick={()=>handlecartDelete}>delete cart</Button>
+   
+    <div className='maincart'>
+    
+    
     
      
      { x.map((e)=>{
       return(
-        <div>
-        <h1>{e.title}</h1>
-        <h2>{e.price}</h2>
-        <img src={e.images.image1} alt="producti"/>
+        <div key={e.id} className='cartdiv'>
+        <h1 className='title'>{e.brand}</h1>
+        
+        <img style={{width:"100%"}} src={e.images.image1} alt="producti"/>
+        <h2> Rs {e.price}</h2>
         <br/>
-        <Button>Buy Product</Button>
-        <Button onClick={()=>handlecartRemove(e.id)}>remove item</Button>
+        <Button onClick={()=>{alert("payment")}}>Buy Product</Button>
+        <Button className='btns' onClick={()=>handlecartRemove(e.id)}>remove item</Button>
 
         </div>
       )
     })}
     </div>
+    </>
   )
 }
 
