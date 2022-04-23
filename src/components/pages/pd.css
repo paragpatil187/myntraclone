@@ -7,15 +7,31 @@ img{
 
 }
 .imagediv{
+    
     display:flex;
-    flex-basis:200px ;
+    flex-basis:30%;
+    gap:5%;
+    width:80%;
+    margin-top:1%;
+    text-align: center;
+    margin:auto;
+    height:10%;
+    
+    
 }
+.imagedivimg{
+    width:100%;
+    height:300px;
+}
+
 #btn1{
-    height:60px;
-    width:240px;
+    height:7%;
+    width:10%;
     background-color:#ff3e6c;
    border-radius: 5px;
     color: white;
+    padding: 2%;
+
 }
 #btn2{
     height:60px;
@@ -48,6 +64,9 @@ ul{
     justify-content: space-evenly;
     padding: 15px; 
      height:850px;
+     width:80%;
+     margin: auto;
+     margin-top: 10%;
     
     
 
@@ -60,4 +79,65 @@ padding: 25px;
 
 
 
+}
+#do{
+    text-decoration: line-through;
+}
+#pin{
+height:40px;
+width:250px
+}
+ul{
+    text-decoration: none;
+}
+#button{
+    
+    margin-top: 50px;
+    font-weight: 100px;
+    /* padding:20px; */
+    
+    
+}
+#btn1{
+    height:60px;
+    width:240px;
+    background-color:#ff3e6c;
+   border-radius: 5px;
+    color: white;
+}
+#btn2{
+    height:60px;
+    width:240px;
+    font-weight:50px;
+    margin-left: 50px;
+    
+   
+}
+#content{
+    color: #908680;
+}
+#recommendation{
+    display:grid;
+        grid-template-columns: repeat(6,15%);
+        grid-gap:2%;
+
+        /* justify-content: space-between; */
+}
+
+
+#dummy{
+      
+   width: 100%;
+    height:60px;
+    background-color:#e9efff;
+     margin-top: 20px; 
+}
+
+#gas{
+    display: flex;
+    height: 100%;
+    margin-left:300px;
+}
+li{
+    list-style: none;
 }

@@ -6,6 +6,7 @@ import Login from './components/pages/Login';
 import { useSelector } from 'react-redux';
 import Productdetails from './components/pages/Productdetails';
 import Cart from './components/pages/Cart';
+import { Header } from './components/header/Header';
 const PrivateRoute=({isAuthenticated,children})=>{
   return isAuthenticated ? children:<Navigate to ="/login"/>
 }
@@ -13,8 +14,11 @@ const PrivateRoute=({isAuthenticated,children})=>{
 
 function App() {
   const {isAuthenticated}=useSelector((state)=>state.login)
-  return (
+  
+    
+    return (
     <div className="App">
+    <Header/>
     <Routes>
     <Route path="/" element={<Home/>}></Route>
     <Route path="/login" element={<Login/>}></Route>

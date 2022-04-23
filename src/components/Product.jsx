@@ -59,7 +59,7 @@ const changePage=({selected})=>{
   return (
     <>
     <div className='navbar2'>
-    <div className='navbar2childdiv1'></div>
+    <div className='navbar2childdiv1'>FILTER</div>
     <div className='navbar2childdiv2'></div>
     <div className='navbar2childdiv3'>sort by
     <Button onClick={()=>{setSort("ltoh")}}>ascending</Button><br/>
@@ -122,7 +122,7 @@ const changePage=({selected})=>{
                 <p className='nameofitem'>{e.title}</p>
                 <p> Rs {e.price}</p>
                 <p>{e.discount}</p>
-                <button  onClick={()=>{handleCart(e.id)}}>ADD TO BAG</button>
+                <Button id='btn1' onClick={()=>{handleCart(e.id)}}>ADD TO BAG</Button>
                 
                 </div>
             )

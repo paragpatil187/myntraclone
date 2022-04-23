@@ -10,7 +10,7 @@ function Home() {
    console.log( "home",data)
   return (
     <>
-    <Header/>
+    
     <Product />
    
     

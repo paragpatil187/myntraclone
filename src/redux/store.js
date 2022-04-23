@@ -1,5 +1,6 @@
 
 import { createStore,applyMiddleware,combineReducers, compose } from "redux";
+import { composeWithDevTools } from "redux-devtools-extension"
 import { productReducer } from "./Data/reducer";
 import thunk from "redux-thunk";
 import { loginReducer } from "./Login/reducer";
@@ -10,6 +11,6 @@ const rootReducer=combineReducers({
     
     
 })
-const store=createStore(rootReducer,applyMiddleware(thunk)
-)
+const store=createStore(rootReducer,composeWithDevTools( applyMiddleware(thunk)
+));
 export {store}

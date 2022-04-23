@@ -14,6 +14,7 @@ export const loginReducer = (store=initState, { type, payload }) => {
     case LOGIN_SUCCESS:
       return {
         ...store,
+        loading:false,
         error: false,
         isAuthenticated: true,
         token: payload.token,

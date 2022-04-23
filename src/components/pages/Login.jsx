@@ -19,7 +19,7 @@ import { Navigate } from 'react-router-dom';
     };
     console.log(payload)
     dispatch(login(payload))
-    dispatch(login({isAuthenticated:true}))
+    //dispatch(login({isAuthenticated:true}))
     
   }
   
