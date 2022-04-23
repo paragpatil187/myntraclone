@@ -1,9 +1,10 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import TextField from '@mui/material/TextField';
 import { Box, Button, Container, createTheme, ThemeProvider, Typography } from '@material-ui/core';
 import { useDispatch, useSelector } from 'react-redux';
-import { login } from '../../redux/Login/action';
+import {loginFailure, loginLoading, loginSuccess } from '../../redux/Login/action';
 import { Navigate } from 'react-router-dom';
+import axios from 'axios';
 
 
  export default function Login() {
@@ -17,11 +18,29 @@ import { Navigate } from 'react-router-dom';
       email,
       password
     };
+      dispatch(loginLoading())
+        dispatch(loginSuccess({token:123456,email:email}))
+        axios.post("https://reqres.in/api/login",{
+          email,
+          password
+          
+          //  headers:{
+          //    "Content-Type":"application/json"
+          // }
+        })
+        .then((res)=> console.log(res))
+        
+        .catch((err)=>console.log(err))
+      
+    
     console.log(payload)
-    dispatch(login(payload))
+   // dispatch(login(payload))
     //dispatch(login({isAuthenticated:true}))
     
   }
+  // useEffect(()=>{
+  //   handleLogin()
+  // },[])
   
   const theme = createTheme();
 
