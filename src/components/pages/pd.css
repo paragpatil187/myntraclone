@@ -1,0 +1,63 @@
+img{
+    width: 100%;
+
+};
+*{
+    text-align:center;
+
+}
+.imagediv{
+    display:flex;
+    flex-basis:200px ;
+}
+#btn1{
+    height:60px;
+    width:240px;
+    background-color:#ff3e6c;
+   border-radius: 5px;
+    color: white;
+}
+#btn2{
+    height:60px;
+    width:240px;
+    font-weight:50px;
+    margin-left: 50px;
+    
+   
+}
+#image1{
+    width:100%;
+    height:800px
+}
+#right_box{
+
+width: 50%;
+padding: 20px;
+font-family: sans-serif
+
+;
+
+}
+ul{
+    text-decoration: none;
+}
+#do{
+    text-decoration: line-through;
+}#main{
+    display:flex;
+    justify-content: space-evenly;
+    padding: 15px; 
+     height:850px;
+    
+    
+
+} 
+#clicked_data{
+   
+width:50%;
+padding: 25px;
+
+
+
+
+}

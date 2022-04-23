@@ -2,25 +2,14 @@ import React, { useEffect } from "react";
 import { useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
 //import * as React from 'react';
-import AppBar from "@mui/material/AppBar";
-import Button from "@mui/material/Button";
-import CameraIcon from "@mui/icons-material/PhotoCamera";
-import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
-import CssBaseline from "@mui/material/CssBaseline";
+import "./pd.css"
 import Grid from "@mui/material/Grid";
-import Stack from "@mui/material/Stack";
-import Box from "@mui/material/Box";
-import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
-import Container from "@mui/material/Container";
-import Link from "@mui/material/Link";
-import { createTheme, ThemeProvider } from "@mui/material/styles";
-import { productReducer } from "../../redux/Data/reducer";
 
-const cards = [1, 2, 3, 4, 5];
+import { createTheme, ThemeProvider } from "@mui/material/styles";
+
+import { Button } from "@material-ui/core";
+
+
 
 const theme = createTheme();
 
@@ -52,25 +41,64 @@ export default function Productdetails() {
     <div>
     {po.map((e)=>{
       return(
-        <div>
-        <h1>{e.title}</h1>
-        <img src={e.images.image1}/>
-        <img src={e.images.image2}/>
-        <img src={e.images.image3}/>
-        <img src={e.images.image4}/>
+        
+        <div id ="main">
+        <div id="clicked_data">
+        <img  src={e.images.image1}/>
+        </div>
+        <div id="right_box">
+        <h2>{e.brand}</h2>
+        <h3 style={{color:"#908680"}}>{e.title}</h3>
+        <h3>Rs. {e.price} <span id="do">{e.off_price}</span>{e.discount} % off </h3> 
+        </div>
+        <h5 style={{color:"#1eb0a0"}}></h5>
+        <h5>SELECT SIZE</h5>
+        <p style={{fontWeight:"600",fontSize:"20px"}}> <span style={{border:"1px solid",padding:"1% 3%" }} className="ml-3">M</span> <span style={{border:"1px solid",padding:"1% 4%" }} className="ml-2">L</span> <span style={{border:"1px solid",padding:"1% 3%"}} className="ml-2">XL</span></p>
+        <div id="button">
+        <Button id="btn1">add to cart</Button> 
+        <Button id="btn2">add to wishlist</Button>
+        </div>
+        <div id="content">
+    <input type="text"  id="pin" placeholder="Enter a PIN code" />
+    <h5 style={{marginTop:"1%"}}>Please enter PIN code to check delivery time & Pay on Delivery Availability</h5>
+
+    
+    <ul>
+        <li>100% Original Products</li>
+        <li>Pay on delivery might be available</li>
+        <li>Easy 15 days returns and exchanges</li>
+        <li>Try & Buy might be available</li>
+        <li>Regular fit</li>
+      
+        <li>Polo with classic collar</li>
+        <li>Hand wash</li>
+    </ul>
+</div>
+<h3>BEST OFFERS</h3>
+<p>This product is already at its best price</p>
+<ul>
+    <li>EMI option available</li>
+</ul>
+
+<p style={{color:"red",marginTop:"0px"}}>View Plan</p>
+        <Grid  className="imagediv">
+       
+        <img item xs={2} sm={4} md={4}  src={e.images.image2}/>
+        <img   item xs={2} sm={4} md={4} src={e.images.image3}/>
+        <img item xs={2} sm={4} md={4} src={e.images.image4}/>
+        </Grid>
         <h1>{e.desc}</h1>  
-        <p>{e.price}</p> 
+        
         <p>{e.color}</p>
         <p>{e.rating}</p>
-        <p>{e.price}</p>
-        <p>{e.discount}</p> 
-        <Button>add to cart</Button> 
-        <Button>add to wishlist</Button>
+        
+        
         <Button onClick={()=>{navigate("/")}}>go to home</Button>
         
         
         
         </div>
+        
 
       )
     })}

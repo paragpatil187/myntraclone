@@ -1,10 +1,10 @@
 import { Button } from '@material-ui/core';
+import { ConstructionOutlined } from '@mui/icons-material';
 import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
-import { deleteCart } from '../../redux/Data/action';
+import { deleteCart, removeallcart } from '../../redux/Data/action';
 
 const Cart = () => {
-  const [idx,setIdx]=useState("")
   const dispatch=useDispatch()
   const data = useSelector((state) => state.data.data);
   console.log("cart", data);
@@ -31,21 +31,31 @@ const Cart = () => {
 //     return x
 //   }
 // })
-const handlecartDelete=()=>{
+const handlecartRemove=(idx)=>{
+  const filterdata=cartproducts.filter((e)=>{
+    return e.id!=idx
+  })
+  console.log(filterdata)
+  dispatch(deleteCart(idx))
+
+  // data.forEach((e)=>{
+  //   if(e.id==idx){
+  //     dispatch(deleteCart(e))}
+  //   })
 
 }
-console.log(cartproducts)
+  const handlecartDelete=()=>{
+    dispatch(removeallcart())
+
+  }
+// console.log(cartproducts)
 let x=cartproducts
   return (
     <div>
     <Button onClick={()=>handlecartDelete}>delete cart</Button>
-    {x.filter((e)=>{
-      if(+idx!=+e.id){
-        return e
-
-      }
-    })
-      .map((e)=>{
+    
+     
+     { x.map((e)=>{
       return(
         <div>
         <h1>{e.title}</h1>
@@ -53,7 +63,7 @@ let x=cartproducts
         <img src={e.images.image1} alt="producti"/>
         <br/>
         <Button>Buy Product</Button>
-        <Button onClick={()=>setIdx(e.id)}>remove item</Button>
+        <Button onClick={()=>handlecartRemove(e.id)}>remove item</Button>
 
         </div>
       )

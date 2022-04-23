@@ -4,6 +4,7 @@
  export const ADD_CART="ADD_CART"
 export const REMOVE_FROM_CART="REMOVE_FROM_CART"
 export const DELETE_CART="DELETE_CART"
+export const REMOVE_ALL="REMOVE_ALL"
 const storeData=(payload)=>({
     type:STORE_DATA,
     payload:payload
@@ -21,6 +22,10 @@ export const deleteCart=(payload)=>({
     type:DELETE_CART,
     payload:payload
 
+})
+export const removeallcart=()=>({
+    type:REMOVE_ALL,
+    
 })
 
 export default storeData

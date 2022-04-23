@@ -3,6 +3,7 @@ import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
 import PersonIcon from '@mui/icons-material/Person';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
 
 
 
@@ -15,6 +16,10 @@ const useStyle = makeStyles({
 });
 
 export const Iconbuttons = () => {
+//const dispatch=useDispatch();
+const cartproducts=useSelector((state)=>state.data.cart);
+console.log("nav",cartproducts.length)
+let cartitems=cartproducts.length
     const classes = useStyle();
   
   return (
@@ -50,10 +55,11 @@ export const Iconbuttons = () => {
       <Box>
         <Button className={classes.buttons}>
           
-            <Badge color="secondary">
+            <Badge color="primary">
               <Link to="/cart">
-                <ShoppingBagIcon />
+                <ShoppingBagIcon/>
               </Link>
+              <span style={{color:"black"}}>{cartproducts.length}</span>
             </Badge>
           
         </Button>
