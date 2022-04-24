@@ -82,7 +82,7 @@ const changePage=({selected})=>{
     </div>
     <div className='imagesdiv'>
   {
-          data.slice(pagesVisited, pagesVisited + itemLimit)
+          data
           
           .filter((e)=>{
             if(category==""){
@@ -111,7 +111,7 @@ const changePage=({selected})=>{
             else if(sorte=="htol"){
               return b.price-a.price
             }
-          })
+          }).slice(pagesVisited, pagesVisited + itemLimit)
         .map((e)=>{
             return (
               
