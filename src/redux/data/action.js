@@ -5,6 +5,9 @@
 export const REMOVE_FROM_CART="REMOVE_FROM_CART"
 export const DELETE_CART="DELETE_CART"
 export const REMOVE_ALL="REMOVE_ALL"
+export const INC_ITEM="INC_ITEM"
+export const DEC_ITEM="DEC_ITEM"
+export const ITEM_CART="ITEM_CART"
 const storeData=(payload)=>({
     type:STORE_DATA,
     payload:payload
@@ -23,9 +26,22 @@ export const deleteCart=(payload)=>({
     payload:payload
 
 })
+export const incrementitem = (payload) => ({
+    type: INC_ITEM,
+    payload: payload,
+  });
+  export const decrementitem = (payload) => ({
+    type: DEC_ITEM,
+    payload: payload,
+  });
+
 export const removeallcart=()=>({
     type:REMOVE_ALL,
     
 })
+export const ItemCart = (payload) => ({
+    type: ITEM_CART,
+    payload: payload,
+  });
 
 export default storeData

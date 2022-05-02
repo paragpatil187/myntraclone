@@ -2,14 +2,25 @@ import { Button } from '@material-ui/core';
 import { ConstructionOutlined } from '@mui/icons-material';
 import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
-import { deleteCart, removeallcart } from '../../redux/Data/action';
+import { Link } from 'react-router-dom';
+import { decrementitem, deleteCart, incrementitem, removeallcart } from '../../redux/Data/action';
 import { Header } from '../header/Header';
 import "./cart.css"
 const Cart = () => {
+ const [tprice,setTprice]=useState(0)
   const dispatch=useDispatch()
   const data = useSelector((state) => state.data.data);
   console.log("cart", data);
   const cartproducts=useSelector((state)=>state.data.cart);
+  
+  //  cartproducts && cartproducts.forEach((e)=>{
+  //    setTprice= tprice+e.price
+     
+     
+
+  //  })
+  //  console.log("tprice",tprice)
+  
  //var idx=id.id
 //  const handleRemove=(id)=>{
 //    //alert("hii")
@@ -32,6 +43,14 @@ const Cart = () => {
 //     return x
 //   }
 // })
+const RemoveItem = (idx) => {
+  dispatch(decrementitem(idx));
+};
+const Additem = (idx) => {
+  dispatch(incrementitem(idx));
+};
+
+
 const handlecartRemove=(idx)=>{
   const filterdata=cartproducts.filter((e)=>{
     return e.id!=idx
@@ -70,11 +89,18 @@ let x=cartproducts
         <br/>
         <Button onClick={()=>{alert("payment")}}>Buy Product</Button>
         <Button className='btns' onClick={()=>handlecartRemove(e.id)}>remove item</Button>
+        <button onClick={() => Additem(e.id)}>+</button>
+                {e.quantity > 1 ? (
+                  <button onClick={() => RemoveItem(e.id)}>-</button>
+                ) : null}
 
         </div>
       )
     })}
     </div>
+    <button>
+        <Link to="/Payment">next</Link>
+      </button>
     </>
   )
 }
