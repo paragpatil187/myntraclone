@@ -85,11 +85,12 @@ let x=cartproducts
         <h1 className='title'>{e.brand}</h1>
         
         <img style={{width:"100%"}} src={e.images.image1} alt="producti"/>
-        <h2> Rs {e.price}</h2>
+        <h2> Rs {e.price*e.quantity}</h2>
         <br/>
         <Button onClick={()=>{alert("payment")}}>Buy Product</Button>
         <Button className='btns' onClick={()=>handlecartRemove(e.id)}>remove item</Button>
         <button onClick={() => Additem(e.id)}>+</button>
+        <h2>quantity:{e.quantity}</h2>
                 {e.quantity > 1 ? (
                   <button onClick={() => RemoveItem(e.id)}>-</button>
                 ) : null}

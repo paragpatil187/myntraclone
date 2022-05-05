@@ -29,19 +29,11 @@ export const productReducer = (state = initState, { type, payload }) => {
       let newArray = [];
       let uniqueObject = {};
 
-      // Loop for the array elements
+    
       for (let i in state.cart) {
-        // Extract the title
         let objid = state.cart[i]["id"];
-
-        // Use the title as the index
-        // if (uniqueObject[objid] == undefined) {
         uniqueObject[objid] = state.cart[i];
-        // uniqueObject[objid]["quantity"] = 1;
-        // } else {
-        //   let quan = uniqueObject[objid]["quantity"];
-        //   uniqueObject[objid]["quantity"] = quan + 1;
-        // }
+        
       }
       if (uniqueObject[payload.id] == undefined) {
         uniqueObject[payload.id] = payload;
