@@ -80,5 +80,26 @@ button{
     color: white;
     font-size:70%;
 }
+.categoriescrousel{
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 25%;
+    justify-content: center;
+    height: 150px;
+    gap:2%;
+
+}
+.categoriescrousel>div>img{
+    width:100%;
+    height:150px;
+}
+.removefilter{
+    width:50%;
+    margin:auto;
+    height:50px;
+}
+.removefilter>img{
+    width:80%
+}
  
 

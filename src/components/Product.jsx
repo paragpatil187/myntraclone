@@ -58,6 +58,7 @@ const changePage=({selected})=>{
    console.log("s",search)
   return (
     <>
+    
     <div className='navbar2'>
     <div className='navbar2childdiv1'>FILTER</div>
     <div className='navbar2childdiv2'></div>
@@ -68,6 +69,16 @@ const changePage=({selected})=>{
     </div>
 
     </div>
+    <div className='categoriescrousel'>
+    <div onClick={()=>{setCategory("tshirt")}}><img src="https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2022/5/2/19ec05fd-2288-4d94-826e-7c8e980ed90a1651475194672-T-Shirts--Men-.jpg" alt="categories"/></div>
+    <div onClick={()=>{setCategory("shirt")}}><img src="https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2022/5/2/d225e8f6-2295-427f-b1f8-9c4812469de51651475194250-Formal-Shirts.jpg" alt="shirts"/></div>
+    <div onClick={()=>{setCategory("shoes")}}><img src="https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2022/5/2/8658c08a-13d3-46e5-894e-55a8896f6ad71651475194257-Formal-Shoes.jpg" alt="shoes"/> </div>
+    <div onClick={()=>{setCategory("Men Clothing")}}><img src="https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2022/5/2/101edb35-e70b-453a-99ad-307c9a2ff04b1651475194201-Casual-Shirts-Men.jpg" alt="men clothing"/></div>
+    <div onClick={()=>{setCategory("Men Footwear")}}><img src="https://assets.myntassets.com/f_webp,w_140,c_limit,fl_progressive,dpr_2.0/assets/images/2022/5/2/6aa9f929-ddf2-4aff-9826-9a267f6330fc1651483710221-Roadster-_M-H_-_More.jpg" alt="mens footewear"/></div>
+    <div onClick={()=>{setCategory("kurta")}}><img src="https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2022/5/2/95d0f95e-f564-4570-b28b-3075e704f0831651475194389-Kurtas-_-Kurta-Sets-Men.jpg" alt="kurta"/></div>
+    
+    </div>
+    <div className='removefilter' onClick={()=>{setCategory("")}}><img src="https://assets.myntassets.com/f_webp,w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2022/5/7/1e599d37-1ed6-4e39-9057-ffb4065173b51651897264796-Unbelievable-Deals.jpg" alt="remove filter"/></div>
     <div className='maindiv'>
     <div className='buttondiv'>
     <Button  onClick={()=>{setCategory("shoes")}}>shoes</Button><br/>
