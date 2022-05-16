@@ -1,13 +1,14 @@
 import React, { useEffect } from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
 //import * as React from 'react';
 import "./pd.css"
-import Grid from "@mui/material/Grid";
+
 
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
 import { Button } from "@material-ui/core";
+import { addCart } from "../../redux/Data/action";
 
 
 
@@ -16,8 +17,10 @@ const theme = createTheme();
 export default function Productdetails() {
   var navigate=useNavigate()
   const params = useParams();
+  const dispatch=useDispatch();
   const idx = params.id;
   console.log(idx);
+
 
   const data = useSelector((state) => state.data.data);
   console.log("product", data);
@@ -27,7 +30,16 @@ export default function Productdetails() {
   if(+x.id === +idx){
     return x
   }})
-  console.log("po",po)
+  console.log("po",po);
+  const handleCart=()=>{
+    
+      
+        dispatch(addCart(po))
+
+      
+    
+  }
+
 
   
   // var items = data.find((e) => {
@@ -58,7 +70,7 @@ export default function Productdetails() {
         <h5>SELECT SIZE</h5>
         <p style={{fontWeight:"600",fontSize:"20px"}}> <span style={{border:"1px solid",padding:"1% 3%" }} className="ml-3">M</span> <span style={{border:"1px solid",padding:"1% 4%" }} className="ml-2">L</span> <span style={{border:"1px solid",padding:"1% 3%"}} className="ml-2">XL</span></p>
         <div id="button">
-        <Button id="btn1">add to cart</Button> 
+        <Button id="btn1" onClick={handleCart}>add to cart</Button> 
         <Button id="btn2">add to wishlist</Button>
         </div>
         
