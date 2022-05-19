@@ -31,10 +31,16 @@ export default function Productdetails() {
     return x
   }})
   console.log("po",po);
-  const handleCart=()=>{
-    
+  const handleCart=(idx)=>{
+    data.forEach((e)=>{
+      if(e.id==idx){
+        dispatch(addCart(e))
+
+      }
+
+    })
       
-        dispatch(addCart(po))
+      
 
       
     
@@ -70,7 +76,7 @@ export default function Productdetails() {
         <h5>SELECT SIZE</h5>
         <p style={{fontWeight:"600",fontSize:"20px"}}> <span style={{border:"1px solid",padding:"1% 3%" }} className="ml-3">M</span> <span style={{border:"1px solid",padding:"1% 4%" }} className="ml-2">L</span> <span style={{border:"1px solid",padding:"1% 3%"}} className="ml-2">XL</span></p>
         <div id="button">
-        <Button id="btn1" onClick={handleCart}>add to cart</Button> 
+        <Button id="btn1" onClick={handleCart(idx)}>add to cart</Button> 
         <Button id="btn2">add to wishlist</Button>
         </div>
         

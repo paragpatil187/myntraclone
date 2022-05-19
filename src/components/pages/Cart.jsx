@@ -10,7 +10,7 @@ const Cart = () => {
  const [tprice,setTprice]=useState(0)
   const dispatch=useDispatch()
   const data = useSelector((state) => state.data.data);
-  console.log("cart", data);
+  //console.log("cart", data);
   const cartproducts=useSelector((state)=>state.data.cart);
   
   //  cartproducts && cartproducts.forEach((e)=>{
