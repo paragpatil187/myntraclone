@@ -99,8 +99,9 @@ let x=cartproducts
       )
     })}
     </div>
+    <button onClick={handlecartDelete}>delete all cart</button>
     <button>
-        <Link to="/Payment">next</Link>
+        <Link to="/checkout">Proceed to checkout</Link>
       </button>
     </>
   )

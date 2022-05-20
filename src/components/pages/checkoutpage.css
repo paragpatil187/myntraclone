@@ -1,0 +1,104 @@
+.main-check-container {
+    width: 100%;
+    border: 1px solid red;
+    margin-top: 90px;
+}
+
+.mainCo {
+    display: flex;
+}
+
+.address-div-div {
+    border: 1px solid rgb(0, 0, 0);
+    width: 50%;
+}
+
+.cart-div {
+    width: 50%;
+    border: 1x solid green;
+}
+
+.maincont-cart {
+    width: 100%;
+    margin: auto;
+    border: 1px solid rgb(0, 0, 0);
+    text-align: center;
+    flex-direction: column;
+}
+
+.cartdiv-div {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.btns-div:hover {
+    background-color: red;
+    color: white;
+    border: none;
+    width: 100px;
+    height: 30px;
+}
+
+.imguse-div {
+    width: 60px;
+    height: 80px;
+}
+
+
+#buttonplusminus-div-div:hover {
+    background-color: red;
+    color: white;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+}
+
+.shopptitle {
+    text-align: center;
+    margin-top: 85px;
+}
+
+.color-div-div {
+    margin-left: 30px;
+    margin-top: 6%;
+    display: flex;
+    gap: 5%;
+    align-items: center;
+    width: 70%;
+}
+
+.checkoutbutton {
+
+    width: 100px;
+}
+
+.offer-div-div {
+    width: 30%;
+    border-radius: 10px;
+    height: 200px;
+}
+
+.total-div-div {
+    width: auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.image-div-div {
+    width: 100px;
+}
+
+#go-to-payment-page-button {
+    border-radius: 4px;
+    background-color: red;
+    color: white;
+    border: none;
+    width: 23%;
+    height: 27px;
+}
+
+.all-shipping-address {
+    border: 0px solid red;
+}
